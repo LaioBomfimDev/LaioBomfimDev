@@ -1,4 +1,44 @@
-<!--
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview - Grimório de Laio Bomfim (Bruxo)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;
+    }
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 45px;
+      background-color: #0d1117;
+      border: 1px solid #161b22;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .markdown-body img {
+      max-width: 100%;
+      box-sizing: content-box;
+    }
+  </style>
+</head>
+<body>
+  <article class="markdown-body" id="content"></article>
+
+  <script>
+    const markdownContent = `<!--
  ╔═══════════════════════════════════════════════════════════════╗
  ║   GRIMÓRIO DE PERFIL · @LaioBomfimDev (Bruxo)                  ║
  ║   Tema: Minimalista · Dark Fantasy & Fogo Verde WoW (Fel Fire) ║
@@ -36,8 +76,8 @@ Sou um **Desenvolvedor Fullstack** focado em forjar sites, landing pages, web ap
 * **Conjurador (IA):** Explorando ferramentas de desenvolvimento com agentes de IA e automação.
 
 ### 📜 Ferramentas do Ofício
-* **Linguagens & Frameworks:** `JavaScript`, `TypeScript`, `Python`, `React`, `Next.js`, `Vue.js`, `Node.js`, `Express`, `NestJS`, `Django`, `FastAPI`, `Tailwind CSS`
-* **Ferramentas & Banco de Dados:** `PostgreSQL`, `MySQL`, `Git`, `GitHub`, `VS Code`
+* **Linguagens & Frameworks:** \`JavaScript\`, \`TypeScript\`, \`Python\`, \`React\`, \`Next.js\`, \`Vue.js\`, \`Node.js\`, \`Express\`, \`NestJS\`, \`Django\`, \`FastAPI\`, \`Tailwind CSS\`
+* **Ferramentas & Banco de Dados:** \`PostgreSQL\`, \`MySQL\`, \`Git\`, \`GitHub\`, \`VS Code\`
 
 ---
 
@@ -52,7 +92,7 @@ Sou um **Desenvolvedor Fullstack** focado em forjar sites, landing pages, web ap
   <img src="https://img.shields.io/badge/Instagram-062B19?style=for-the-badge&logo=instagram&logoColor=00FF66&labelColor=02170D" alt="Instagram" />
 </a>
 <a href="https://wa.me/5500000000000">
-  <img src="https://img.shields.io/badge/WhatsApp-062B19?style=for-the-badge&logo=whatsapp&logoColor=00FF66&labelColor=02170D" alt="WhatsApp" />
+  <img src="https://img.shields.io/badge/WhatsApp-062B19?style=for-the-badge&logo=whatsapp&logoColor=00FF66&labelColor=02170D" alt="Site" />
 </a>
 <a href="https://seu-site.com">
   <img src="https://img.shields.io/badge/Portf%C3%B3lio-062B19?style=for-the-badge&logo=googlechrome&logoColor=00FF66&labelColor=02170D" alt="Site" />
@@ -61,4 +101,9 @@ Sou um **Desenvolvedor Fullstack** focado em forjar sites, landing pages, web ap
   <img src="https://img.shields.io/badge/E--mail-062B19?style=for-the-badge&logo=gmail&logoColor=00FF66&labelColor=02170D" alt="E-mail" />
 </a>
 
-</div>
+</div>`;
+
+    document.getElementById('content').innerHTML = marked.parse(markdownContent);
+  </script>
+</body>
+</html>
