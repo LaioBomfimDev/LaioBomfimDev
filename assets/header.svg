@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+  <defs>
+    <!-- Dark Abyss Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040A06" />
+      <stop offset="50%" stop-color="#08140D" />
+      <stop offset="100%" stop-color="#020603" />
+    </linearGradient>
+
+    <!-- Fel Fire Green Neon Gradient -->
+    <linearGradient id="fel-fire" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF66" />
+      <stop offset="50%" stop-color="#39FF14" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+
+    <linearGradient id="glow-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0" />
+      <stop offset="20%" stop-color="#00FF66" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#39FF14" stop-opacity="1" />
+      <stop offset="80%" stop-color="#00FF66" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#059669" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="15" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="aura-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&amp;family=Fira+Code:wght@500;700&amp;display=swap');
+
+      .title {
+        font-family: 'Cinzel Decorative', 'Georgia', serif;
+        font-size: 76px;
+        font-weight: 900;
+        fill: url(#fel-fire);
+        letter-spacing: 14px;
+        text-anchor: middle;
+        filter: drop-shadow(0 0 12px rgba(0, 255, 102, 0.6));
+        animation: pulseGlow 3s ease-in-out infinite alternate;
+      }
+
+      .subtitle {
+        font-family: 'Fira Code', monospace;
+        font-size: 16px;
+        font-weight: 700;
+        fill: #A7F3D0;
+        letter-spacing: 8px;
+        text-anchor: middle;
+        opacity: 0.9;
+      }
+
+      @keyframes pulseGlow {
+        0% {
+          filter: drop-shadow(0 0 8px rgba(0, 255, 102, 0.4)) drop-shadow(0 0 20px rgba(0, 255, 102, 0.2));
+        }
+        100% {
+          filter: drop-shadow(0 0 18px rgba(57, 255, 20, 0.8)) drop-shadow(0 0 35px rgba(16, 185, 129, 0.5));
+        }
+      }
+
+      @keyframes floatParticle {
+        0% { transform: translateY(0px); opacity: 0.2; }
+        50% { transform: translateY(-12px); opacity: 0.9; }
+        100% { transform: translateY(0px); opacity: 0.2; }
+      }
+
+      .particle { animation: floatParticle 4s ease-in-out infinite; }
+      .p1 { animation-delay: 0s; }
+      .p2 { animation-delay: 0.8s; }
+      .p3 { animation-delay: 1.6s; }
+      .p4 { animation-delay: 2.4s; }
+      .p5 { animation-delay: 3.2s; }
+
+      .flame-icon {
+        fill: url(#fel-fire);
+        filter: drop-shadow(0 0 6px #00FF66);
+      }
+    </style>
+  </defs>
+
+  <!-- Card Frame -->
+  <rect width="900" height="240" rx="16" fill="url(#bg-grad)" stroke="#059669" stroke-width="1.5" stroke-opacity="0.5" />
+
+  <!-- Ambient Fel Fire Aura -->
+  <circle cx="450" cy="120" r="140" fill="#00FF66" opacity="0.12" filter="url(#aura-glow)" />
+
+  <!-- Corner Ornaments (Dark Fantasy Runes) -->
+  <path d="M 30 30 L 70 30 M 30 30 L 30 70" stroke="#00FF66" stroke-width="2" stroke-opacity="0.6" fill="none" />
+  <circle cx="30" cy="30" r="3" fill="#00FF66" />
+
+  <path d="M 870 30 L 830 30 M 870 30 L 870 70" stroke="#00FF66" stroke-width="2" stroke-opacity="0.6" fill="none" />
+  <circle cx="870" cy="30" r="3" fill="#00FF66" />
+
+  <path d="M 30 210 L 70 210 M 30 210 L 30 170" stroke="#00FF66" stroke-width="2" stroke-opacity="0.6" fill="none" />
+  <circle cx="30" cy="210" r="3" fill="#00FF66" />
+
+  <path d="M 870 210 L 830 210 M 870 210 L 870 170" stroke="#00FF66" stroke-width="2" stroke-opacity="0.6" fill="none" />
+  <circle cx="870" cy="210" r="3" fill="#00FF66" />
+
+  <!-- Cosmic Fel Particles / Universe Sparks -->
+  <circle cx="100" cy="50" r="1.5" fill="#00FF66" class="particle p1" />
+  <circle cx="140" cy="90" r="2" fill="#39FF14" class="particle p2" />
+  <circle cx="210" cy="40" r="1.2" fill="#A7F3D0" class="particle p3" />
+  <circle cx="280" cy="85" r="2.5" fill="#00FF66" class="particle p4" />
+  <circle cx="340" cy="35" r="1" fill="#FFFFFF" class="particle p5" />
+  
+  <circle cx="560" cy="35" r="1.2" fill="#00FF66" class="particle p2" />
+  <circle cx="630" cy="75" r="2" fill="#39FF14" class="particle p4" />
+  <circle cx="700" cy="40" r="1.5" fill="#A7F3D0" class="particle p1" />
+  <circle cx="760" cy="80" r="2.5" fill="#00FF66" class="particle p3" />
+  <circle cx="820" cy="55" r="1" fill="#FFFFFF" class="particle p5" />
+
+  <circle cx="90" cy="170" r="1.2" fill="#39FF14" class="particle p3" />
+  <circle cx="160" cy="195" r="2" fill="#00FF66" class="particle p5" />
+  <circle cx="240" cy="165" r="1.5" fill="#A7F3D0" class="particle p1" />
+
+  <circle cx="660" cy="165" r="1.5" fill="#A7F3D0" class="particle p2" />
+  <circle cx="740" cy="190" r="2.2" fill="#00FF66" class="particle p4" />
+  <circle cx="810" cy="165" r="1" fill="#39FF14" class="particle p1" />
+  <circle cx="850" cy="195" r="1.5" fill="#FFFFFF" class="particle p3" />
+
+  <!-- Upper Glow Line -->
+  <path d="M 120 45 L 780 45" stroke="url(#glow-line)" stroke-width="1.5" />
+
+  <!-- Main Title "BRUXO" -->
+  <text x="457" y="132" class="title">BRUXO</text>
+
+  <!-- Lower Glow Line -->
+  <path d="M 120 160 L 780 160" stroke="url(#glow-line)" stroke-width="1.5" />
+
+  <!-- Left Green Flame Icon -->
+  <path d="M 215 194 C 215 188, 219 181, 224 177 C 226 182, 227 185, 227 188 C 229 183, 233 178, 235 174 C 239 180, 239 188, 235 193 C 239 192, 242 188, 242 183 C 246 189, 244 199, 235 203 C 224 207, 215 201, 215 194 Z" class="flame-icon" />
+
+  <!-- Subtitle -->
+  <text x="450" y="195" class="subtitle">FULLSTACK TECHNOMANCER</text>
+
+  <!-- Right Green Flame Icon -->
+  <path d="M 658 194 C 658 188, 662 181, 667 177 C 669 182, 670 185, 670 188 C 672 183, 676 178, 678 174 C 682 180, 682 188, 678 193 C 682 192, 685 188, 685 183 C 689 189, 687 199, 678 203 C 667 207, 658 201, 658 194 Z" class="flame-icon" />
+
+</svg>
